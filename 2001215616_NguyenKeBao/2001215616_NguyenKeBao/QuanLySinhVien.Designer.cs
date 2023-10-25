@@ -35,11 +35,14 @@
             this.them = new System.Windows.Forms.Button();
             this.xoa = new System.Windows.Forms.Button();
             this.sua = new System.Windows.Forms.Button();
-            this.hienthi = new System.Windows.Forms.Button();
             this.ttsinhvien = new System.Windows.Forms.Label();
             this.connect = new System.Windows.Forms.Button();
             this.dgvSinhVien = new System.Windows.Forms.DataGridView();
+            this.comboBoxSV = new System.Windows.Forms.ComboBox();
+            this.hienthi = new System.Windows.Forms.Button();
+            this.hienthitatca = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSinhVien)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hienthitatca)).BeginInit();
             this.SuspendLayout();
             // 
             // id
@@ -105,16 +108,6 @@
             this.sua.UseVisualStyleBackColor = true;
             this.sua.Click += new System.EventHandler(this.sua_Click);
             // 
-            // hienthi
-            // 
-            this.hienthi.Location = new System.Drawing.Point(142, 149);
-            this.hienthi.Name = "hienthi";
-            this.hienthi.Size = new System.Drawing.Size(75, 23);
-            this.hienthi.TabIndex = 7;
-            this.hienthi.Text = "Hiển thị";
-            this.hienthi.UseVisualStyleBackColor = true;
-            this.hienthi.Click += new System.EventHandler(this.hienthi_Click);
-            // 
             // ttsinhvien
             // 
             this.ttsinhvien.AutoSize = true;
@@ -125,7 +118,7 @@
             // 
             // connect
             // 
-            this.connect.Location = new System.Drawing.Point(259, 139);
+            this.connect.Location = new System.Drawing.Point(252, 149);
             this.connect.Name = "connect";
             this.connect.Size = new System.Drawing.Size(75, 23);
             this.connect.TabIndex = 9;
@@ -135,20 +128,51 @@
             // 
             // dgvSinhVien
             // 
-            this.dgvSinhVien.Location = new System.Drawing.Point(37, 178);
+            this.dgvSinhVien.Location = new System.Drawing.Point(37, 216);
             this.dgvSinhVien.Name = "dgvSinhVien";
-            this.dgvSinhVien.Size = new System.Drawing.Size(240, 150);
+            this.dgvSinhVien.Size = new System.Drawing.Size(290, 52);
             this.dgvSinhVien.TabIndex = 0;
+            this.dgvSinhVien.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSinhVien_CellContentClick);
+            // 
+            // comboBoxSV
+            // 
+            this.comboBoxSV.FormattingEnabled = true;
+            this.comboBoxSV.Location = new System.Drawing.Point(37, 189);
+            this.comboBoxSV.Name = "comboBoxSV";
+            this.comboBoxSV.Size = new System.Drawing.Size(178, 21);
+            this.comboBoxSV.TabIndex = 10;
+            this.comboBoxSV.SelectedIndexChanged += new System.EventHandler(this.comboBoxSV_SelectedIndexChanged);
+            // 
+            // hienthi
+            // 
+            this.hienthi.Location = new System.Drawing.Point(142, 149);
+            this.hienthi.Name = "hienthi";
+            this.hienthi.Size = new System.Drawing.Size(75, 23);
+            this.hienthi.TabIndex = 11;
+            this.hienthi.Text = "Hiển Thị";
+            this.hienthi.UseVisualStyleBackColor = true;
+            this.hienthi.Click += new System.EventHandler(this.hienthi_Click);
+            // 
+            // hienthitatca
+            // 
+            this.hienthitatca.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.hienthitatca.Location = new System.Drawing.Point(333, 52);
+            this.hienthitatca.Name = "hienthitatca";
+            this.hienthitatca.Size = new System.Drawing.Size(284, 150);
+            this.hienthitatca.TabIndex = 12;
+            this.hienthitatca.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // QuanLySinhVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(629, 353);
+            this.Controls.Add(this.hienthitatca);
+            this.Controls.Add(this.hienthi);
+            this.Controls.Add(this.comboBoxSV);
             this.Controls.Add(this.dgvSinhVien);
             this.Controls.Add(this.connect);
             this.Controls.Add(this.ttsinhvien);
-            this.Controls.Add(this.hienthi);
             this.Controls.Add(this.sua);
             this.Controls.Add(this.xoa);
             this.Controls.Add(this.them);
@@ -160,6 +184,7 @@
             this.Text = "QuanLySinhVien";
             this.Load += new System.EventHandler(this.QuanLySinhVien_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSinhVien)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hienthitatca)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -175,9 +200,11 @@
         private System.Windows.Forms.Button them;
         private System.Windows.Forms.Button xoa;
         private System.Windows.Forms.Button sua;
-        private System.Windows.Forms.Button hienthi;
         private System.Windows.Forms.Label ttsinhvien;
         private System.Windows.Forms.Button connect;
         private System.Windows.Forms.DataGridView dgvSinhVien;
+        private System.Windows.Forms.ComboBox comboBoxSV;
+        private System.Windows.Forms.Button hienthi;
+        private System.Windows.Forms.DataGridView hienthitatca;
     }
 }
